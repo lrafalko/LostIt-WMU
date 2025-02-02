@@ -1,79 +1,180 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('src/main.js');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
-  margin: 0;
+    background-color: #e7e7e7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card-login{
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.circle-logo-wmu{
+    max-width: 80px;
+    padding: 20px;
+}
+
+.lostnfound-logo{
+    max-width: 200px;
+    padding-bottom: 20px;
+}
+
+.login-field a{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.label-text{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.forget-text{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+    opacity: .75;
+}
+
+.login-field{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 30px;
+}
+
+.login-field .forget-field{
+    width: 100%;
+    text-align: right;
+}
+
+.login-field input{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.input-field{
+  width: 100%;
+}
+
+.spacer{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.login-button-field{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 30px;
+}
+
+.login-button{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+
+    width: 60%;
+    height: 45px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 5px;
+    background-color: #F1C500;
+    color: #532E1F;
+    font-weight: 300;
+    font-size: 20px;
+    
+}
+
+.register-text{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+    opacity: .75;
+}
+
+/* main-page.html */
+.search-bar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  max-width: 32rem;
+  width: 100%;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.background-bar-left{
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+  width: 10rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.background-bar-left button{
+  font-size: 2rem;
+  line-height: 2rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  padding-top: 2rem;
 }
 
-.card {
-  padding: 2em;
+.background-bar-right{
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+  width: 12rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.item-images{
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+  border-radius: .5rem;
+  width: 10rem;
+  height: 10rem;
 }

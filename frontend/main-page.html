@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex h-screen">
+
+    <!-- 왼쪽 노란색 사이드 -->
+    <div class="background-bar-left">
+        <button class="text-brown-800 text-2xl">☰</button>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <div class="flex-1 bg-white flex flex-col items-center py-6 overflow-auto">
+        
+        <!-- 제목 -->
+        <img src="src/assets/lostnfound_logo.png" alt="" class="lostnfound-logo">
+
+        <!-- 검색창 -->
+        <div class="search-bar">
+            <input type="text" class="w-full border border-gray-400 rounded-l-full py-2 px-4">
+            <button class="bg-yellow-500 text-black font-bold italic px-6 py-2 rounded-r-full">SEARCH</button>
+        </div>
+
+        <!-- LOST ITEMS -->
+        <h2 class="text-xl font-bold italic mt-8">LOST ITEMS</h2>
+
+        <!-- 아이템 목록 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+        </div>
+
+        <!-- MORE ITEMS -->
+        <p class="text-gray-500 italic mt-4">MORE ITEMS</p>
+
+        <!-- 또 다른 LOST ITEMS -->
+        <h2 class="text-xl font-bold italic mt-6">LOST ITEMS</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+            <div class="item-images"></div>
+        </div>
+
+        <p class="text-gray-500 italic mt-4">MORE ITEMS</p>
+
+         <!-- 또 다른 LOST ITEMS -->
+         <h2 class="text-xl font-bold italic mt-6">LOST ITEMS</h2>
+
+         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+             <div class="item-images"></div>
+             <div class="item-images"></div>
+             <div class="item-images"></div>
+             <div class="item-images"></div>
+             <div class="item-images"></div>
+             <div class="item-images"></div>
+             <div class="item-images"></div>
+             <div class="item-images"></div>
+         </div>
+ 
+         <p class="text-gray-500 italic mt-4">MORE ITEMS</p>
+    </div>
+
+    <!-- 오른쪽 노란색 사이드 -->
+    <div class="background-bar-right"></div>
+
+</body>
+</html>
