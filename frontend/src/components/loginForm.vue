@@ -33,7 +33,7 @@ const switchToSignup = () => {
                     </div>
                     
                     <div class="forget-field">
-                        <a class="forget-text" href="forget_email.html">Forget Your Email?</a>
+                        <a class="forget-text" href="/">Forget Your Email?</a>
                     </div>
 
                 </div>
@@ -49,7 +49,7 @@ const switchToSignup = () => {
                     </div>
                     
                     <div class="forget-field">
-                        <a class="forget-text" href="forget_pw.html">Forget Your Password?</a>
+                        <a class="forget-text" href="/">Forget Your Password?</a>
                     </div>
 
                 </div>

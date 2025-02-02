@@ -32,10 +32,7 @@
       padding: 20px;
   }
 
-  .lostnfound-logo{
-      max-width: 200px;
-      padding-bottom: 20px;
-  }
+
 
   .login-field a{
     padding-bottom: 5px;
@@ -148,7 +145,7 @@
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+    background-color: rgb(234 179 8);
     width: 10rem;
     align-items: flex-start;
     justify-content: center;
@@ -165,14 +162,14 @@
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+    background-color: rgb(234 179 8);
     width: 12rem;
     align-items: flex-start;
     justify-content: center;
   }
 
   .item-images{
-    background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+    background-color: rgb(209 213 219);
     border-radius: .5rem;
     width: 10rem;
     height: 10rem;
@@ -182,7 +179,7 @@
   .main-body {
     display: flex;
     height: 100vh;
-    background-image: url("assets/wmu-login-photo.jpg");
+    background-color: rgba(234, 179, 8, 1);
   }
 
   .search-bar {
@@ -199,17 +196,20 @@
     justify-content: center;
     align-items: flex-start;
     padding: 1rem 0;
-    background-color: rgba(234, 179, 8, var(--tw-bg-opacity, 1));
+    background-color: rgba(234, 179, 8, 1);
   }
 
   .background-bar-right {
+    width: 12rem;
+  }
+  .background-bar-left {
     width: 12rem;
   }
 
   .item-images {
     width: 10rem;
     height: 10rem;
-    background-color: rgba(209, 213, 219, var(--tw-bg-opacity, 1));
+    background-color: rgba(209, 213, 219, 1);
     border-radius: 0.5rem;
   }
 
@@ -217,7 +217,7 @@
     font-style: italic;
     font-weight: 700;
     padding: 0.5rem 1.5rem;
-    background-color: rgba(234, 179, 8, var(--tw-bg-opacity, 1));
+    background-color: rgba(234, 179, 8, 1);
     border-radius: 0 9999px 9999px 0;
     cursor: pointer;
   }
@@ -233,9 +233,14 @@
 
   .item-container{
     gap: 1rem;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    display: grid;
     margin-top: 1rem;
+  }
+
+  .list-container{
+    display: flex;
+    margin-top: 1rem;
+    text-align: center;
+    width: 50%;
   }
 
   .search-input{
@@ -243,7 +248,7 @@
     padding-bottom: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
+    border-color: rgb(156 163 175);
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
     border-width: 1px;
@@ -251,35 +256,187 @@
   }
 
   .main-container{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    background-color: rgb(255 255 255);
     overflow: auto;
     align-items: center;
     flex-direction: column;
     flex: 1 1 0%;
     display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
   }
 
   .discribe-text{
-    color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+    color: rgb(107 114 128);
     font-style: italic;
     margin-top: 1rem;
   }
 
   .side-bar{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1rem 0;
-    background-color: rgba(234, 179, 8, var(--tw-bg-opacity, 1));
-    width: 10rem;
-  }
-
-  .side-bar.open{
+    flex-direction: column;
+    background-color: rgba(234, 179, 8, 1);
     border-radius: 0 3rem 3rem 0;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    transform: translateX(0);     
+    top: 0; /* 상단 고정 */
+    left: -20rem;
+    z-index: 9999;
   }
+  
+  .fade-in {
+    animation: slide-fade 0.3s ease-in forwards;
+   }
+   .fade-out {
+    animation: back-fade 0.3s ease-out forwards;
+   }
 
-  .manu-btn{
+  @keyframes slide-fade {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(20rem);
+    }
+   }
+
+   @keyframes back-fade {
+    0% {
+      transform: translateX(-15rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+   }
+
+   
+ 
+  
+
+  .manu-btn{ 
     font-size: 3rem;
   }
+
+.logo-container{
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.logo-container img{
+  max-height: 100px;
+  padding-bottom: 20px;
+}
+
+.menu-icon-container{
+  position: absolute;
+  width: 2rem;
+  left: 2rem;
+  top: 1.5rem;
+}
+
+/* 아이콘 컨테이너 */
+.icon-container {
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  border: 1px solid #8B5E3B; /* Tailwind brown-700 */
+}
+
+.icon {
+  color: #8B5E3B;
+  font-size: 1.25rem; /* Tailwind text-xl */
+}
+
+/* 텍스트 컨테이너 */
+.text-container {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.name {
+  color: #8B5E3B;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.status {
+  color: #8B5E3B;
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* 확장 버튼 */
+.expand-button {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: 2px solid #8B5E3B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expand-icon {
+  color: #8B5E3B;
+  font-size: 12px;
+}
+
+/* 카메라 버튼 */
+.camera-button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8B5E3B;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.camera-icon {
+  color: #8B5E3B;
+}
+
+/* 버튼 컨테이너 */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+/* 기본 버튼 스타일 */
+.custom-button {
+  width: 100%;
+  background-color: #8B5E3B;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 0;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #7A4E2A;
+}
+
+.profile-container img{
+  width: 200px;
+
+}
