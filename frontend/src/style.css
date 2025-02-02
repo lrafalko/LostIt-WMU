@@ -1,90 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('main.js');
 
 html {
   scrollbar-width: none; /* Firefox */
 }
-
-body {
-  background-color: #e7e7e7;
-  font-family: 'Rubik', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
-/* 카드 스타일 */
-.card-login {
+
+body {
+    background-color: #e7e7e7;
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card-login{
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.circle-logo-wmu{
+    max-width: 80px;
+    padding: 20px;
+}
+
+.lostnfound-logo{
+    max-width: 200px;
+    padding-bottom: 20px;
+}
+
+.login-field a{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.label-text{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.forget-text{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+    opacity: .75;
+}
+
+.login-field{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 30px;
+}
+
+.login-field .forget-field{
+    width: 100%;
+    text-align: right;
+}
+
+.login-field input{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.input-field{
+  width: 100%;
+}
+
+.spacer{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.login-button-field{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 30px;
+}
+
+.login-button{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+
+    width: 60%;
+    height: 45px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 5px;
+    background-color: #F1C500;
+    color: #532E1F;
+    font-weight: 300;
+    font-size: 20px;
+    
+}
+
+.register-text{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+    opacity: .75;
+}
+
+/* main-page.html */
+.search-bar {
   display: flex;
-  flex-direction: column;
+  max-width: 32rem;
+  width: 100%;
   align-items: center;
-  width: 40%;
-  margin: 10% auto 0;
-  background-color: #fff;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
 }
 
-.circle-logo-wmu {
-  max-width: 80px;
-  padding: 20px;
-}
-
-.lostnfound-logo {
-  max-width: 200px;
-  padding-bottom: 20px;
-}
-
-/* 입력 필드 */
-.login-field {
+.background-bar-left{
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 60%;
-  margin: 0 auto 30px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+  width: 10rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.login-field input {
-  width: 100%;
-  height: 30px;
-  border-radius: 5px;
+.background-bar-left button{
+  font-size: 2rem;
+  line-height: 2rem;
+  cursor: pointer;
+  padding-top: 2rem;
 }
 
-.login-field a,
-.forget-text,
-.register-text {
-  font-size: 15px;
-  font-style: italic;
-  text-decoration: none;
-  color: black;
-  opacity: 0.75;
-  padding: 5px 0;
-}
-
-.login-field .forget-field {
-  width: 100%;
-  text-align: right;
-}
-
-/* 버튼 스타일 */
-.login-button-field {
+.background-bar-right{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 30px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+  width: 12rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.login-button {
-  width: 60%;
-  height: 45px;
-  border-radius: 5px;
-  background-color: #F1C500;
-  color: #532E1F;
-  font-size: 20px;
-  font-weight: bold;
+.item-images{
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+  border-radius: .5rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 /* 메인 페이지 */
