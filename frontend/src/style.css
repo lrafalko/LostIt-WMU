@@ -178,3 +178,13 @@ body {
   width: 10rem;
   height: 10rem;
 }
+
+.main-body{
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  font-family: "Rubik", serif;
+  background-image: url("assets/wmu-login-photo.jpg");
+}
